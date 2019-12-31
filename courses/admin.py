@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Subject, Course, Module
+admin.site.index_template = 'admin/admin_index.html'
 
 
 @admin.register(Subject)
