@@ -12,8 +12,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'g^)-0+bgw9a+$!&-f&9wc55-m@%x3m^nyai2+sh5^3rt+61+a0'
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -45,6 +43,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Subdomain middleware
+    'courses.middleware.subdomain_course_middleware',
 ]
 
 # For All cash site(doesnt good for educa site)
